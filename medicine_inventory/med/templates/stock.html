@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Template</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            background-color:#4CAF50;
+        }
+        .sub{
+            font-size:0.6em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Position 
+        <span class="sub">
+        as on {% now "F j, Y - H:i:s" %} 
+        </span>
+    </h1>
+
+    <h2>{{date}}</h2>
+
+    <table>
+        <tr>
+           <th>Doses Form</th>
+           <th>Medicine Name</th>
+           <th>Quantity</th>
+           <th>MRP</th>
+           <th>Batch No</th>
+           <th>Expiry Date</th>
+           <th>Total Amount</th>
+        </tr>
+        {% for medicine in data %}
+           <tr>
+              <td>{{ medicine.1 }}</td>
+              <td>{{ medicine.2 }}</td>
+              <td>{{ medicine.3 }}</td>
+              <td>{{ medicine.4 }}</td>
+              <td>{{ medicine.5 }}</td>
+              <td>{{ medicine.6 }}</td>
+              <td>{{ medicine.7 }}</td>
+           </tr>
+        {% endfor %}
+     </table>
+    </ol>
+</body>
+</html>

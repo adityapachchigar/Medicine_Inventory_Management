@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmed!</title>
+</head>
+
+<body>
+
+    <h1>Congratulations!</h1>
+    <h2>The order has been placed successfully</h2>
+    <p><a href="{% url 'generate_pdf' %}" download>Download Bill (PDF)</a></p>
+    {% comment %} <form>
+        <button class="button">Go to Order Page</button>
+    </form> {% endcomment %}
+
+</body>
+
+</html>
